@@ -18,8 +18,9 @@
         /* Contenedor de la imagen */
         .map-container {
             position: relative;
-            width: 739px; /* Ajuste del tamaño del contenedor de la imagen */
-            height: 400px;
+            width: 100%;
+            max-width: 739px; /* Tamaño de la imagen original */
+            height: auto;
             margin: 0 auto;
         }
 
@@ -27,7 +28,6 @@
         #mapa-img {
             width: 100%;
             height: auto;
-            position: relative;
         }
 
         /* Estilos de los íconos */
@@ -37,7 +37,7 @@
             color: red;
         }
 
-        /* Agrega un estilo para mostrar el título cuando pasas el mouse */
+        /* Estilos para el hover que muestra el título */
         .icon:hover::after {
             content: attr(data-title);
             position: absolute;
@@ -50,6 +50,116 @@
             top: -25px;
             left: -10px;
         }
+
+        /* Posicionamiento de los íconos con unidades relativas al tamaño de la ventana gráfica */
+        .icon[data-title="Valle Verde"] {
+            left: 22.3%;
+            top: 15.2%;
+        }
+        .icon[data-title="Peñas Blancas"] {
+            left: 23.6%;
+            top: 17.6%;
+        }
+        .icon[data-title="Lago Pellegrini"] {
+            left: 23.6%;
+            top: 53.5%;
+        }
+        .icon[data-title="Cerro Policía"] {
+            left: 22.3%;
+            top: 71.9%;
+        }
+        .icon[data-title="Chelforó"] {
+            left: 26.6%;
+            top: 53.5%;
+        }
+        .icon[data-title="Aguada Cecilio"] {
+            left: 27.0%;
+            top: 100%;
+        }
+        .icon[data-title="Sierra Pailemán"] {
+            left: 27.0%;
+            top: 109.5%;
+        }
+        .icon[data-title="Arroyo Los Berros"] {
+            left: 27.0%;
+            top: 118.5%;
+        }
+        .icon[data-title="El Cóndor"] {
+            left: 36.8%;
+            top: 100%;
+        }
+        .icon[data-title="Viedma"] {
+            left: 36.2%;
+            top: 95%;
+        }
+        .icon[data-title="Rincón Treneta"] {
+            left: 24.3%;
+            top: 100%;
+        }
+        .icon[data-title="Comicó"] {
+            left: 21.7%;
+            top: 105%;
+        }
+        .icon[data-title="Yaminué"] {
+            left: 22.7%;
+            top: 102.5%;
+        }
+        .icon[data-title="Aguada de Guerra"] {
+            left: 19.5%;
+            top: 105%;
+        }
+        .icon[data-title="Rio Chico"] {
+            left: 14%;
+            top: 118%;
+        }
+        .icon[data-title="Mamuel Choique"] {
+            left: 15%;
+            top: 118%;
+        }
+        .icon[data-title="El Manso"] {
+            left: 9.4%;
+            top: 116.5%;
+        }
+        .icon[data-title="Caín"] {
+            left: 20.5%;
+            top: 121.5%;
+        }
+        .icon[data-title="Cona Niyeu"] {
+            left: 24.6%;
+            top: 123%;
+        }
+        .icon[data-title="Laguna Blanca"] {
+            left: 14.9%;
+            top: 99.5%;
+        }
+        .icon[data-title="Colan Conhue"] {
+            left: 18.6%;
+            top: 98.5%;
+        }
+        .icon[data-title="Corralito"] {
+            left: 13.5%;
+            top: 100%;
+        }
+        .icon[data-title="Villa Llanquín"] {
+            left: 11.7%;
+            top: 95%;
+        }
+        .icon[data-title="Mencué"] {
+            left: 15.3%;
+            top: 91.5%;
+        }
+        .icon[data-title="Blancura Centro"] {
+            left: 15.3%;
+            top: 84%;
+        }
+        .icon[data-title="Aguada Guzmán"] {
+            left: 18.5%;
+            top: 80%;
+        }
+        .icon[data-title="Nahupa Huen"] {
+            left: 16.9%;
+            top: 65%;
+        }
     </style>
 </head>
 <body>
@@ -59,89 +169,90 @@
         <img src="paisaje (1).jpg" alt="Mapa interactivo" id="mapa-img">
 
         <!-- Íconos para los diferentes lugares -->
-        <a href="https://es.wikipedia.org/wiki/Valle_Verde" class="icon" style="left: 678px; top: 60px;" data-title="Valle Verde">
+        <a href="https://es.wikipedia.org/wiki/Valle_Verde" class="icon" data-title="Valle Verde">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Peñas_Blancas" class="icon" style="left: 695px; top: 70px;" data-title="Peñas Blancas">
+        <a href="https://es.wikipedia.org/wiki/Peñas_Blancas" class="icon" data-title="Peñas Blancas">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Lago_Pellegrini" class="icon" style="left: 690px; top: 214px;" data-title="Lago Pellegrini">
+        <a href="https://es.wikipedia.org/wiki/Lago_Pellegrini" class="icon" data-title="Lago Pellegrini">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Cerro_Policia" class="icon" style="left: 677px; top: 287px;" data-title="Cerro Policía">
+        <a href="https://es.wikipedia.org/wiki/Cerro_Policia" class="icon" data-title="Cerro Policía">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Chelforo" class="icon" style="left: 870px; top: 214px;" data-title="Chelforó">
+        <a href="https://es.wikipedia.org/wiki/Chelforo" class="icon" data-title="Chelforó">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Aguada_Cecilio" class="icon" style="left: 882px; top: 400px;" data-title="Aguada Cecilio">
+        <a href="https://es.wikipedia.org/wiki/Aguada_Cecilio" class="icon" data-title="Aguada Cecilio">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Sierra_Paileman" class="icon" style="left: 882px; top: 438px;" data-title="Sierra Pailemán">
+        <a href="https://es.wikipedia.org/wiki/Sierra_Paileman" class="icon" data-title="Sierra Pailemán">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Arroyo_Los_Berros" class="icon" style="left: 882px; top: 474px;" data-title="Arroyo Los Berros">
+        <a href="https://es.wikipedia.org/wiki/Arroyo_Los_Berros" class="icon" data-title="Arroyo Los Berros">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/El_Condor" class="icon" style="left: 1180px; top: 400px;" data-title="El Cóndor">
+        <a href="https://es.wikipedia.org/wiki/El_Condor" class="icon" data-title="El Cóndor">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Viedma" class="icon" style="left: 1160px; top: 380px;" data-title="Viedma">
+        <a href="https://es.wikipedia.org/wiki/Viedma" class="icon" data-title="Viedma">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Rincon_Treneta" class="icon" style="left: 780px; top: 400px;" data-title="Rincón Treneta">
+        <a href="https://es.wikipedia.org/wiki/Rincon_Treneta" class="icon" data-title="Rincón Treneta">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Comicó" class="icon" style="left: 712px; top: 420px;" data-title="Comicó">
+        <a href="https://es.wikipedia.org/wiki/Comicó" class="icon" data-title="Comicó">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Yaminue" class="icon" style="left: 742px; top: 410px;" data-title="Yaminué">
+        <a href="https://es.wikipedia.org/wiki/Yaminue" class="icon" data-title="Yaminué">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Aguada_de_Guerra" class="icon" style="left: 636px; top: 420px;" data-title="Aguada de Guerra">
+        <a href="https://es.wikipedia.org/wiki/Aguada_de_Guerra" class="icon" data-title="Aguada de Guerra">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Rio_Chico" class="icon" style="left: 450px; top: 470px;" data-title="Rio Chico">
+        <a href="https://es.wikipedia.org/wiki/Rio_Chico" class="icon" data-title="Rio Chico">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Mamuel_Choique" class="icon" style="left: 480px; top: 470px;" data-title="Mamuel Choique">
+        <a href="https://es.wikipedia.org/wiki/Mamuel_Choique" class="icon" data-title="Mamuel Choique">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/El_Manso" class="icon" style="left: 300px; top: 465px;" data-title="El Manso">
+        <a href="https://es.wikipedia.org/wiki/El_Manso" class="icon" data-title="El Manso">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Cain" class="icon" style="left: 655px; top: 485px;" data-title="El Caín">
+        <a href="https://es.wikipedia.org/wiki/Cain" class="icon" data-title="Caín">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Cona_Niyeu" class="icon" style="left: 785px; top: 490px;" data-title="Cona Niyeu">
+        <a href="https://es.wikipedia.org/wiki/Cona_Niyeu" class="icon" data-title="Cona Niyeu">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Laguna_Blanca" class="icon" style="left: 475px; top: 395px;" data-title="Laguna Blanca">
+        <a href="https://es.wikipedia.org/wiki/Laguna_Blanca" class="icon" data-title="Laguna Blanca">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Colan_Conhue" class="icon" style="left: 590px; top: 390px;" data-title="Colan Conhue">
+        <a href="https://es.wikipedia.org/wiki/Colan_Conhue" class="icon" data-title="Colan Conhue">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Corralito" class="icon" style="left: 429px; top: 400px;" data-title="Corralito">
+        <a href="https://es.wikipedia.org/wiki/Corralito" class="icon" data-title="Corralito">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Villa_Llanquin" class="icon" style="left: 370px; top: 380px;" data-title="Villa Llanquín">
+        <a href="https://es.wikipedia.org/wiki/Villa_Llanquin" class="icon" data-title="Villa Llanquín">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Mencue" class="icon" style="left: 485px; top: 365px;" data-title="Mencué">
+        <a href="https://es.wikipedia.org/wiki/Mencue" class="icon" data-title="Mencué">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Blancura_Centro" class="icon" style="left: 475px; top: 335px;" data-title="Blancura Centro">
+        <a href="https://es.wikipedia.org/wiki/Blancura_Centro" class="icon" data-title="Blancura Centro">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Aguada_Guzman" class="icon" style="left: 590px; top: 320px;" data-title="Aguada Guzmán">
+        <a href="https://es.wikipedia.org/wiki/Aguada_Guzman" class="icon" data-title="Aguada Guzmán">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <a href="https://es.wikipedia.org/wiki/Nahupa_Huen" class="icon" style="left: 540px; top: 260px;" data-title="Nahupa Huen">
+        <a href="https://es.wikipedia.org/wiki/Nahupa_Huen" class="icon" data-title="Nahupa Huen">
             <i class="fas fa-map-marker-alt"></i>
         </a>
     </div>
 </body>
 </html>
+
 
 
