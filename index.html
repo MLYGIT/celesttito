@@ -9,8 +9,8 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 0; /* Elimina el margen del cuerpo */
-            padding: 0; /* Elimina el padding del cuerpo */
+            margin: 0;
+            padding: 0;
         }
 
         h1 {
@@ -21,7 +21,6 @@
             position: relative;
             max-width: 739px; /* Ancho máximo de la imagen */
             margin: 0 auto; /* Centra el contenedor */
-            padding: 0; /* Elimina el padding */
         }
 
         #mapa-img {
@@ -35,26 +34,10 @@
             font-size: 24px; /* Tamaño del ícono */
             color: red; /* Color del ícono */
             text-decoration: none; /* Sin subrayado */
-            pointer-events: none; /* Evita que el ícono capture eventos del mouse */
         }
 
         .icon:hover {
-            pointer-events: auto; /* Permitir eventos de mouse al pasar sobre el ícono */
-        }
-
-        .icon::after {
-            content: attr(data-title);
-            position: absolute;
-            background-color: white;
-            padding: 2px 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            display: none; /* Oculta por defecto */
-            z-index: 1;
-        }
-
-        .icon:hover::after {
-            display: block; /* Muestra el tooltip al pasar el mouse */
+            color: blue; /* Cambia de color al pasar el ratón */
         }
     </style>
 </head>
