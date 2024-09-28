@@ -10,8 +10,8 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 0;
-            padding: 0;
+            margin: 0; /* Elimina el margen del cuerpo */
+            padding: 0; /* Elimina el padding del cuerpo */
         }
 
         h1 {
@@ -21,12 +21,14 @@
         .map-container {
             position: relative;
             max-width: 739px; /* Ancho máximo de la imagen */
-            margin: 0 auto;
+            margin: 0 auto; /* Centra el contenedor */
+            padding: 0; /* Elimina el padding */
         }
 
         #mapa-img {
             width: 100%; /* Imagen ajustada al contenedor */
             height: auto; /* Mantiene la relación de aspecto */
+            display: block; /* Elimina espacio inferior */
         }
 
         .icon {
