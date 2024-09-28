@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,16 +35,26 @@
             font-size: 24px; /* Tamaño del ícono */
             color: red; /* Color del ícono */
             text-decoration: none; /* Sin subrayado */
+            pointer-events: none; /* Evita que el ícono capture eventos del mouse */
         }
 
-        .icon:hover::after {
+        .icon:hover {
+            pointer-events: auto; /* Permitir eventos de mouse al pasar sobre el ícono */
+        }
+
+        .icon::after {
             content: attr(data-title);
             position: absolute;
             background-color: white;
             padding: 2px 5px;
             border: 1px solid #ccc;
             border-radius: 3px;
+            display: none; /* Oculta por defecto */
             z-index: 1;
+        }
+
+        .icon:hover::after {
+            display: block; /* Muestra el tooltip al pasar el mouse */
         }
     </style>
 </head>
