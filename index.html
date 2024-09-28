@@ -1,12 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa anexos 2024</title>
+    <title>Mapa Anexos 2024</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -18,21 +18,17 @@
             margin: 20px 0;
         }
 
-        /* Contenedor de la imagen */
         .map-container {
             position: relative;
-            width: 739px; /* Ancho original de la imagen */
-            height: 400px; /* Alto original de la imagen */
+            max-width: 739px; /* Ancho máximo de la imagen */
             margin: 0 auto;
         }
 
-        /* Imagen del mapa */
         #mapa-img {
-            width: 739px; /* Tamaño original de la imagen */
-            height: 400px; /* Tamaño original de la imagen */
+            width: 100%; /* Imagen ajustada al contenedor */
+            height: auto; /* Mantiene la relación de aspecto */
         }
 
-        /* Estilos de los íconos */
         .icon {
             position: absolute;
             font-size: 24px; /* Tamaño del ícono */
@@ -40,7 +36,6 @@
             text-decoration: none; /* Sin subrayado */
         }
 
-        /* Hover para mostrar título */
         .icon:hover::after {
             content: attr(data-title);
             position: absolute;
@@ -159,7 +154,7 @@
         <area shape="rect" coords="450,470,480,500" href="https://es.wikipedia.org/wiki/Rio_Chico" title="Rio Chico">
         <area shape="rect" coords="480,470,510,500" href="https://es.wikipedia.org/wiki/Mamuel_Choique" title="Mamuel Choique">
         <area shape="rect" coords="310,465,340,495" href="https://es.wikipedia.org/wiki/El_Manso" title="El Manso">
-        <area shape="rect" coords="655,485,685,515" href="https://es.wikipedia.org/wiki/Cain" title="Caín">
+        <area shape="rect" coords="655,485,685,515" href="https://es.wikipedia.org/wiki/Cain" title="El Caín">
         <area shape="rect" coords="785,490,815,520" href="https://es.wikipedia.org/wiki/Cona_Niyeu" title="Cona Niyeu">
         <area shape="rect" coords="475,395,505,425" href="https://es.wikipedia.org/wiki/Laguna_Blanca" title="Laguna Blanca">
         <area shape="rect" coords="590,390,620,420" href="https://es.wikipedia.org/wiki/Colan_Conhue" title="Colan Conhue">
@@ -172,4 +167,3 @@
     </map>
 </body>
 </html>
-
